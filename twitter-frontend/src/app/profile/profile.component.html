@@ -1,10 +1,13 @@
-<div class="layout" *ngIf="Profile">
+<div class="layout">
     <nav>
     <app-left-nav></app-left-nav>
     </nav>
 
     <!-- main section start -->
-    <main style="position: relative">
+    <main style="position: relative" *ngIf="!Profile">
+        <!-- You could do a loading spinner here -->
+    </main>
+    <main style="position: relative" *ngIf="Profile">
         <div class="header">
             <h2 [innerHtml]="Profile.name"></h2>
         </div>

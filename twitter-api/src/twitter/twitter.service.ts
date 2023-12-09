@@ -21,14 +21,15 @@ export class TwitterService {
     }
 
     private async loadDataFromDb() {
-        let tweets = await this.client.db("WebFrameworks").collection("Tweets").find<Tweet>({}).toArray();
+        let tweets = await this.client.db("Twitter").collection("Tweets").find<Tweet>({}).toArray();
         if (tweets.length === 0) {
-            console.log(twitterJson);
             let tweets = twitterJson.tweets;
             let profiles = twitterJson.profiles;
 
             await this.client.db("Twitter").collection("Tweets").insertMany(tweets);
             await this.client.db("Twitter").collection("Profiles").insertMany(profiles);
+
+            console.log("Loaded data from twitter.json into mongo db");
         }
     }
 
@@ -37,9 +38,19 @@ export class TwitterService {
         return tweets;
     }
 
+    async getTweetsForHandle(handle: string) {
+        let tweets = await this.client.db("Twitter").collection("Tweets").find<Tweet>({handle: handle}).toArray();
+        return tweets;
+    }
+
     async getProfiles() {
         let profiles = await this.client.db("Twitter").collection("Profiles").find<Profile>({}).toArray();
         return profiles;
+    }
+
+    async getProfile(handle: string) {
+        let profile = await this.client.db("Twitter").collection("Profiles").findOne<Profile>({handle: handle});
+        return profile;
     }
 
     async createTweet(tweet: Tweet) {

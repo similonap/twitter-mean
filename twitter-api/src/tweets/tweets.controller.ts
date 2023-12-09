@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { TwitterService } from 'src/twitter/twitter.service';
 import { Tweet } from 'src/types';
 
@@ -11,6 +11,11 @@ export class TweetsController {
     @Get()
     public async getTweets() {
         return await this.twitterService.getTweets();
+    }
+
+    @Get(":handle")
+    public async getTweetsForHandle(@Param("handle") handle: string) {
+        return await this.twitterService.getTweetsForHandle(handle);
     }
 
     @Post()
