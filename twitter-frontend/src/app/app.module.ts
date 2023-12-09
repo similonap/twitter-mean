@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { RightNavComponent } from './right-nav/right-nav.component';
 import { RouterModule } from '@angular/router';
+import { TweetsComponent } from './tweets/tweets.component';
 
 @NgModule({
   declarations: [
@@ -14,14 +15,15 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     ProfileComponent,
     LeftNavComponent,
-    RightNavComponent
+    RightNavComponent,
+    TweetsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: ':id', component: ProfileComponent },
+      { path: ':handle', component: ProfileComponent },
       { path: '**', redirectTo: ''}
     ])
   ],

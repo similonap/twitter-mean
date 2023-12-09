@@ -1,4 +1,4 @@
-<div class="layout">
+<div class="layout" *ngIf="Profile">
     <nav>
     <app-left-nav></app-left-nav>
     </nav>
@@ -6,47 +6,18 @@
     <!-- main section start -->
     <main style="position: relative">
         <div class="header">
-            <h2>Arthas Menethil</h2>
+            <h2 [innerHtml]="Profile.name"></h2>
         </div>
 
-        <img class="profile_banner" src="/assets/images/banners/TheLichKing.png"/>
-        <img class="profile_avatar" src="/assets/images/avatars/TheLichKing.png"/>
+        <img class="profile_banner" [src]="BannerUrl"/>
+        <img class="profile_avatar" [src]="AvatarUrl"/>
         <section class="profile">
-            <div class="profile_name">Arthas Menethil</div>
-            <div class="profile_handle">TheLichKing</div>
-            <div class="profile_bio">The Lich King, ruler of the Scourge, and master of Icecrown Citadel. Bringing cold and darkness to Azeroth. ❄️👑</div>
+            <div class="profile_name" [innerHtml]="Profile.name"></div>
+            <div class="profile_handle" [innerHtml]="Profile.handle"></div>
+            <div class="profile_bio" [innerHtml]="Profile.bio"></div>
         </section>
 
-        <section class="posts">
-            <article class="post">
-                <div class="post_profile-image">
-                    <img src="/assets/images/avatars/TheLichKing.png" alt="java-logo">
-                </div>
-                <div class="post_body">
-                    <div class="post_header">
-                        <div class="post_header-text">
-                            <h3>Arthas Menethil
-                                <span class="header-icon-section">
-                                    <span class="material-icons post_badge">verified</span><a href="/TheLichKing">@TheLichKing</a>
-                                </span>
-                            </h3>
-                        </div>
-    
-                        <div class="post_header-description">
-                            Knock knock. Who's there? Frostmourne. Frostmourne who? Frostmourne hungers... for more jokes! 😈 #LichKingLaughs #Warcraft
-                        </div>
-                        
-                    </div>
-                    <div class="post_footer">
-                        <span class="material-icons">chat</span>
-                        <span class="material-icons">repeat</span>
-                        <span class="material-icons">favorite_border</span>
-                        <span class="material-icons">file_upload</span>
-                    </div>
-    
-                </div>
-            </article>
-        </section>
+        <app-tweets [tweets]="Tweets"></app-tweets>
 
     </main>
     <!-- main section end -->
