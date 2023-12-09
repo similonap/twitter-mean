@@ -6,11 +6,11 @@ In deze opgave gaan we stap voor stap een Twitter-achtige applicatie bouwen. We 
 
 Als je de applicatie voor de eerste keer opstart zal je de home pagina zien.
 
-<figure><img src="img/home.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/home.png" alt=""><figcaption></figcaption></figure>
 
 Je kan ook de statische versie van de profile pagina bekijken door het component wisselen in het `app.component.html` bestand.
 
-<figure><img src="img/home (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/home (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Routing en componenten
 
@@ -20,7 +20,7 @@ Het `Home` component en `Profile` component bevatten beiden een navigatiebalk la
 
 
 
-<figure><img src="img/assets/navs.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/navs.png" alt=""><figcaption></figcaption></figure>
 
 #### Routing
 
@@ -56,7 +56,7 @@ Voer de volgende stappen uit:
 * Zorg dat de `createdOn` datum van de tweet wordt getoond in een leesbaar formaat. Toon dit in het formaat: `MMM d, y, HH:mm:ss`.
 * Zorg dat de `verified` badge enkel wordt getoond als de gebruiker geverifieerd is.
 
-<figure><img src="img/home_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/home_1.png" alt=""><figcaption></figcaption></figure>
 
 ## Profile component
 
@@ -67,7 +67,7 @@ Momenteel bevat het \`Profile\` component nog enkel statische html. Dit gaan we 
 * Gebruik enkel property binding om alle informatie van de gebruiker te tonen.&#x20;
 * Toon onder de informatie van de gebruiker een lijst van zijn tweets. Deze tweets moeten ook in chronologische volgorde worden getoond. De informatie van de tweets moet op dezelfde manier worden getoond als in het \`Home\` component.&#x20;
 
-<figure><img src="img/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 ### Child component
 
@@ -103,6 +103,6 @@ Zorg ervoor dat de tekst van het tekstveld wordt leeggemaakt als de tweet succes
 
 Zorg ervoor dat de `Tweet` button wordt gedisabled als de gebruiker geen tekst heeft ingevuld en als de tekst langer is dan 140 karakters.
 
-<figure><img src="img/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="img/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
