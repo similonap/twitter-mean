@@ -15,8 +15,8 @@
             <form method="post" action="/">
                 <div class="tweet_box-input">
                     <img src="/assets/images/avatars/JonDoe.png" alt="profile image">
-                    <textarea rows="4" cols="40" placeholder="What's happening?" name="text"></textarea>
-                    <button>Tweet</button>
+                    <textarea rows="4" cols="40" placeholder="What's happening?" name="text" [(ngModel)]="tweetText"></textarea>
+                    <button [disabled]="Disabled" (click)="submitTweet()">Tweet</button>
                 </div>
             </form>
 

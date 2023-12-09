@@ -8,6 +8,7 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
 import { RightNavComponent } from './right-nav/right-nav.component';
 import { RouterModule } from '@angular/router';
 import { TweetsComponent } from './tweets/tweets.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TweetsComponent } from './tweets/tweets.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: ':handle', component: ProfileComponent },

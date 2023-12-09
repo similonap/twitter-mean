@@ -19,6 +19,10 @@ export class TwitterService {
     return lastValueFrom(this.httpClient.get<Tweet[]>("http://localhost:3000/tweets/" + handle))
   }
 
+  public createTweet(tweet: Tweet): Promise<Tweet> {
+    return lastValueFrom(this.httpClient.post<Tweet>("http://localhost:3000/tweets", tweet));
+  }
+
   public async getTweets(): Promise<Tweet[]> {
     let tweets : Tweet[] = await lastValueFrom(this.httpClient.get<Tweet[]>("http://localhost:3000/tweets"));
     let profiles: Profile[] = await lastValueFrom(this.httpClient.get<Profile[]>("http://localhost:3000/profiles"));

@@ -156,6 +156,19 @@ main::-webkit-scrollbar {
     cursor: pointer;
 }
 
+.tweet_box-input button[disabled] {
+    background-color:gray;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
 .post_profile-image img {
     border-radius: 50%;
     height: 50px;
